@@ -14,8 +14,8 @@ export function Footer() {
               A premium digital agency crafting brand systems, websites, software, and AI experiences for modern businesses.
             </p>
             <div className="mt-6 flex items-center gap-3">
-              <a href="https://www.linkedin.com" aria-label="LinkedIn" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky"><Linkedin size={16} /></a>
-              <a href="https://www.instagram.com" aria-label="Instagram" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky"><Instagram size={16} /></a>
+              <a href="https://www.linkedin.com/company/mintrolabs/" aria-label="LinkedIn" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky"><Linkedin size={16} /></a>
+              <a href="https://www.instagram.com/mintrolabs/" aria-label="Instagram" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky"><Instagram size={16} /></a>
               <a href="mailto:hello@mintrolabs.com" aria-label="Email" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky"><Mail size={16} /></a>
             </div>
           </div>

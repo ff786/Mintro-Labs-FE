@@ -44,24 +44,28 @@ export function Services() {
         </h2>
       </Reveal>
 
-      <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-12 grid items-stretch gap-6 md:grid-cols-2 xl:grid-cols-3">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <Reveal key={service.title} direction="up" delay={index * 0.06}>
-              <article className="group glass-card relative overflow-hidden p-8 transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
+              <article className="group glass-card relative flex h-full flex-col overflow-hidden p-8 transition duration-500 hover:-translate-y-2 hover:shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-sky/10 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
-                <div className="relative">
+                <div className="relative flex h-full flex-col">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-sky/10 bg-sky/10 text-sky">
                     <Icon size={20} />
                   </div>
-                  <h3 className="mt-6 text-xl font-semibold text-white">{service.title}</h3>
-                  <ul className="mt-5 space-y-3 text-sm leading-7 text-white/70">
+
+                  <h3 className="mt-6 text-xl font-semibold text-white">
+                    {service.title}
+                  </h3>
+
+                  <ul className="mt-5 flex-grow space-y-3 text-sm leading-7 text-white/70">
                     {service.bullets.map((item) => (
-                      <li key={item} className="flex items-center gap-3">
-                        <span className="h-2.5 w-2.5 rounded-full bg-sky" />
-                        {item}
-                      </li>
+                        <li key={item} className="flex items-center gap-3">
+                          <span className="h-2.5 w-2.5 rounded-full bg-sky" />
+                          {item}
+                        </li>
                     ))}
                   </ul>
                   <div className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-white transition group-hover:text-sky">
