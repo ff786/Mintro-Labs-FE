@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#050505] text-white antialiased selection:bg-sky/30 selection:text-black;
+  background-image: radial-gradient(circle at top, rgba(167, 229, 14, 0.08), transparent 28%), radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.04), transparent 32%);
+}
+
+::selection {
+  @apply bg-sky/30 text-black;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass-card {
+    @apply rounded-[2rem] border border-white/10 bg-white/10 backdrop-blur-xl shadow-[0_30px_90px_rgba(0,0,0,0.55)];
+  }
+
+  .section-shell {
+    @apply mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10;
+  }
+}
