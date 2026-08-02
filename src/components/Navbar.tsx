@@ -315,7 +315,7 @@ export function Navbar() {
                                 )}
                             </div>
                             <div className="mt-auto pt-10">
-                                <button type="button" onClick={() => openCalendly()} className="group flex w-full items-center justify-between rounded-2xl bg-[#a7e50e] px-6 py-5 text-left text-lg font-semibold text-black transition hover:bg-[#c5ff36] focus:outline-none focus:ring-2 focus:ring-white">
+                                <button type="button" onClick={() => openCalendly()} className="group flex w-full items-center justify-between rounded-2xl bg-[#fff] px-6 py-5 text-left text-lg font-semibold text-black transition hover:bg-[#c5ff36] focus:outline-none focus:ring-2 focus:ring-white">
                                     Start a project <ArrowRight className="transition-transform group-hover:translate-x-1" aria-hidden="true" />
                                 </button>
                                 <p className="mt-6 text-xs font-medium uppercase tracking-[.22em] text-white/40">Premium digital experiences</p>
