@@ -23,11 +23,11 @@ export function Hero() {
           <motion.div className="absolute right-[10%] top-[20%] h-72 w-72 rounded-full border border-white/10 bg-zinc-900/80 backdrop-blur-2xl" animate={{ y: [0, -18, 0], x: [0, 14, 0] }} transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut' }} />
       </div>
 
-      <div className="section-shell relative flex min-h-[100svh] flex-col justify-center py-32 sm:py-36 lg:py-40">
+      <div className="section-shell relative flex min-h-screen flex-col justify-center pt-36 pb-32 sm:pt-40 sm:pb-36 lg:pt-44 lg:pb-40">
         <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="max-w-3xl">
             <motion.p initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="mb-6 inline-flex rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm font-medium text-white/75 backdrop-blur">
-              Premium digital agency • strategy • design • growth
+              Premium Digital Agency
             </motion.p>
             <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.15 }} className="text-balance text-4xl font-semibold leading-[0.92] tracking-[-0.04em] text-white sm:text-5xl lg:text-7xl">
               Transforming traditional businesses into digital brands.

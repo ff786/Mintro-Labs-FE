@@ -50,7 +50,7 @@ export function Navbar() {
     }, [mobileOpen]);
 
     return (
-        <header className="fixed inset-x-0 top-6 z-[60] flex justify-center px-6">
+        <header className="fixed inset-x-0 top-3 z-[60] flex justify-center px-6">
             <CalendlyModal
                 open={open}
                 onCloseAction={() => setOpen(false)}
