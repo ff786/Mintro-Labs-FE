@@ -4,12 +4,13 @@ import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { motion } from "framer-motion";
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'About', href: '#about' },
   { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Pricing', href: '/pricing' },
   { label: 'Process', href: '#process' },
   { label: 'Contact', href: '#contact' },
 ];
@@ -19,6 +20,16 @@ const serviceItems = ['Brand Strategy', 'Web Experiences', 'UI/UX Systems', 'AI 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  const getLinkHref = (href: string) => {
+    // If it's an anchor link and we're not on home, prepend / to navigate home first
+    if (href.startsWith('#') && !isHome) {
+      return `/${href}`;
+    }
+    return href;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -50,7 +61,7 @@ export function Navbar() {
                           transition={{ duration: 0.25 }}
                       >
                           <Link
-                              href="#home"
+                              href={getLinkHref("#home")}
                               className="text-lg font-semibold uppercase tracking-[0.24em] lg:text-xl"
                           >
                               Mintro Labs
@@ -64,12 +75,12 @@ export function Navbar() {
                           {navLinks.map((link) =>
                               link.label === "Services" ? (
                                   <div key={link.label} className="group relative">
-                                      <Link
-                                          href={link.href}
-                                          className="text-sm font-medium text-white/70 transition hover:text-white"
-                                      >
-                                          {link.label}
-                                      </Link>
+                                       <Link
+                                           href={getLinkHref(link.href)}
+                                           className="text-sm font-medium text-white/70 transition hover:text-white"
+                                       >
+                                           {link.label}
+                                       </Link>
 
                                       {/* Dropdown */}
                                       <div className="pointer-events-none absolute left-1/2 top-full mt-5 w-72 -translate-x-1/2 rounded-3xl border border-white/10 bg-zinc-950/95 p-5 opacity-0 shadow-2xl shadow-black/50 transition-all duration-300 group-hover:pointer-events-auto group-hover:opacity-100">
@@ -77,23 +88,23 @@ export function Navbar() {
                                               Premium Services
                                           </p>
 
-                                          <div className="space-y-2">
-                                              {serviceItems.map((item) => (
-                                                  <a
-                                                      key={item}
-                                                      href="#services"
-                                                      className="block rounded-2xl px-3 py-2 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
-                                                  >
-                                                      {item}
-                                                  </a>
-                                              ))}
-                                          </div>
+                                           <div className="space-y-2">
+                                               {serviceItems.map((item) => (
+                                                   <a
+                                                       key={item}
+                                                       href={getLinkHref("#services")}
+                                                       className="block rounded-2xl px-3 py-2 text-sm text-white/70 transition hover:bg-white/10 hover:text-white"
+                                                   >
+                                                       {item}
+                                                   </a>
+                                               ))}
+                                           </div>
                                       </div>
                                   </div>
                               ) : (
                                   <Link
                                       key={link.label}
-                                      href={link.href}
+                                      href={getLinkHref(link.href)}
                                       className="text-sm font-medium text-white/70 transition hover:text-white"
                                   >
                                       {link.label}
@@ -105,18 +116,18 @@ export function Navbar() {
 
                   {/* Right Side */}
                   <div className="justify-self-end hidden lg:flex">
-                      <motion.a
-                          href="#contact"
-                          whileHover={{
-                              scale: 1.06,
-                              y: -3,
-                              boxShadow: "0 0 20px rgba(167, 229, 14, 0.35)",
-                          }}
-                          transition={{ duration: 0.25 }}
-                          className="rounded-full border border-white/10 bg-white px-5 py-2.5 text-sm font-medium text-black"
-                      >
-                          Work with us
-                      </motion.a>
+                       <motion.a
+                           href={getLinkHref("#contact")}
+                           whileHover={{
+                               scale: 1.06,
+                               y: -3,
+                               boxShadow: "0 0 20px rgba(167, 229, 14, 0.35)",
+                           }}
+                           transition={{ duration: 0.25 }}
+                           className="rounded-full border border-white/10 bg-white px-5 py-2.5 text-sm font-medium text-black"
+                       >
+                           Work with us
+                       </motion.a>
                   </div>
 
                   {/* Mobile Button */}
@@ -139,7 +150,7 @@ export function Navbar() {
                           {navLinks.map((link) => (
                               <Link
                                   key={link.label}
-                                  href={link.href}
+                                  href={getLinkHref(link.href)}
                                   className="text-sm font-medium text-white/70"
                                   onClick={() => setMobileOpen(false)}
                               >
@@ -148,7 +159,7 @@ export function Navbar() {
                           ))}
 
                           <a
-                              href="#contact"
+                              href={getLinkHref("#contact")}
                               className="mt-2 inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-sm font-medium text-black"
                               onClick={() => setMobileOpen(false)}
                           >

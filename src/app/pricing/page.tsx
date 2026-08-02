@@ -4,6 +4,8 @@ import { useState } from 'react';
 import { ArrowRight, CalendarDays, CheckCircle2 } from 'lucide-react';
 import { CalendlyModal } from '@/components/CalendlyModal';
 import { CALENDLY_URL } from '@/data/contactInfo';
+import { Navbar } from '@/components/Navbar';
+import { Footer } from '@/components/Footer';
 
 const pricingCards = [
   {
@@ -54,18 +56,20 @@ export default function PricingPage() {
   };
 
   return (
-    <main className="relative overflow-x-hidden bg-[#050505] pt-[96px] text-white">
-      <CalendlyModal open={open} onClose={() => setOpen(false)} serviceTitle={selectedService} calendlyUrl={CALENDLY_URL} />
+    <>
+      <Navbar />
+      <main id="pricing" className="relative overflow-x-hidden bg-[#050505] pt-[96px] text-white">
+        <CalendlyModal open={open} onCloseAction={() => setOpen(false)} serviceTitle={selectedService} calendlyUrl={CALENDLY_URL} />
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(167,229,14,0.14),transparent_25%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.05),transparent_30%),linear-gradient(180deg,#050505_0%,#090909_28%,#050505_100%)]" />
 
       <section className="section-shell pb-20 pt-10 sm:pb-24">
         <div className="mx-auto max-w-4xl text-center">
-          <p className="text-sm font-semibold uppercase tracking-[0.35em] text-sky">Pricing</p>
+          <p className="text-m font-semibold uppercase tracking-[0.35em] text-sky">Pricing</p>
           <h1 className="mt-4 text-4xl font-semibold tracking-[-0.03em] sm:text-5xl lg:text-6xl">
-            Starting From pricing for our core services
+            Starting From prices for our core services
           </h1>
           <p className="mt-6 text-lg leading-8 text-white/70">
-            Explore our demo pricing in LKR. Every package is a starting point and can be tailored to your scope.
+            Explore our service pricing. Every package is a starting point and can be tailored to your scope.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 text-sm text-white/60">
@@ -73,7 +77,7 @@ export default function PricingPage() {
               <CalendarDays size={16} /> Schedule a call with Calendly
             </span>
             <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2">
-              <CheckCircle2 size={16} /> Custom quotes available
+              <CheckCircle2 size={16} /> Check our the starting prices
             </span>
           </div>
         </div>
@@ -113,7 +117,9 @@ export default function PricingPage() {
           ))}
         </div>
       </section>
-    </main>
+      </main>
+      <Footer />
+    </>
   );
 }
 

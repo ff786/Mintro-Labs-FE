@@ -11,7 +11,7 @@ export function CTA() {
 
   return (
     <section id="contact" className="section-shell pb-24 sm:pb-28 lg:pb-32">
-      <ConsultationModal open={open} onClose={() => setOpen(false)} phoneNumber={WHATSAPP_NUMBER} />
+      <ConsultationModal open={open} onCloseAction={() => setOpen(false)} phoneNumber={WHATSAPP_NUMBER} />
       <Reveal>
         <div className="overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-800 p-10 text-white shadow-luxury sm:p-14">
           <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
