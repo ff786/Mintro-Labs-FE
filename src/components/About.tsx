@@ -20,7 +20,7 @@ export function About() {
             Mintro Labs helps businesses establish a strong digital presence by creating professional brands, modern websites, intuitive software, and digital experiences that drive growth.
           </p>
           <p className="max-w-xl text-lg leading-8 text-white/70">
-            We don't simply build websites—we build digital foundations that enable businesses to grow, connect with customers, and operate more efficiently.
+            We don't simply build websites we build digital foundations that enable businesses to grow, connect with customers, and operate more efficiently.
           </p>
           <a href="#contact" className="inline-flex items-center gap-2 text-sm font-semibold text-white transition hover:text-sky">
             Discover our approach <ArrowUpRight size={16} />
