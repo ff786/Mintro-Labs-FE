@@ -10,37 +10,37 @@ import { Footer } from '@/components/Footer';
 const pricingCards = [
   {
     title: 'Brand Identity & Logo Design',
-    startingFrom: 'LKR 45,000',
+    startingFrom: 'USD $499',
     description: 'Identity systems, logo concepts, and essential brand assets for a polished launch.',
     features: ['Logo concepts', 'Brand color palette', 'Typography direction', 'Basic brand guide'],
   },
   {
     title: 'Website Development',
-    startingFrom: 'LKR 120,000',
+    startingFrom: 'USD $1,299',
     description: 'Responsive websites built for speed, clarity, and lead generation.',
     features: ['Landing pages', 'Corporate websites', 'Performance optimization', 'Responsive design'],
   },
   {
     title: 'UI/UX Design',
-    startingFrom: 'LKR 60,000',
+    startingFrom: 'USD $699',
     description: 'Thoughtful interface design and user journeys that make products easier to use.',
     features: ['User flows', 'Wireframes', 'High-fidelity UI', 'Clickable prototype'],
   },
   {
     title: 'AI Automation',
-    startingFrom: 'LKR 95,000',
+    startingFrom: 'USD $1,499',
     description: 'Automations that save time, respond faster, and streamline repetitive work.',
     features: ['Workflow automation', 'Lead handling', 'Chatbots', 'Process integrations'],
   },
   {
     title: 'Software Development',
-    startingFrom: 'LKR 150,000',
+    startingFrom: 'USD $2,999',
     description: 'Custom applications and internal tools that scale with your business needs.',
     features: ['Custom portals', 'Booking systems', 'Dashboards', 'API integrations'],
   },
   {
     title: 'Social Media Management',
-    startingFrom: 'LKR 40,000',
+    startingFrom: 'USD $249/Month',
     description: 'Content planning, post design, and campaign execution for consistent growth.',
     features: ['Content calendar', 'Post design', 'Campaign planning', 'Monthly analytics'],
   },
