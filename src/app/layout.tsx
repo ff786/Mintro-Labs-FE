@@ -2,10 +2,11 @@ import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { BackToTopButton } from '@/components/BackToTopButton';
 import { WhatsAppChatButton } from '@/components/WhatsAppChatButton';
 
 const inter = Inter({ subsets: ['latin'] });
-const logoUrl = '/icon.svg';
+const logoUrl = '/mintrolabs-logo.svg';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://mintrolabs.com'),
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <html lang="en" className="scroll-smooth">
       <body className={inter.className}>
       {children}
+      <BackToTopButton />
       <WhatsAppChatButton />
       </body>
       </html>
