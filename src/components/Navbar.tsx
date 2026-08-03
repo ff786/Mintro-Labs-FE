@@ -110,8 +110,6 @@ export function Navbar() {
 
     return (
         <>
-            {/* This also works with the existing WhatsApp link's aria-label. Adding
-          data-whatsapp-button to that component is an optional, more explicit hook. */}
             <style jsx global>{`
         body[data-mobile-menu-open='true'] a[aria-label='Chat with us on WhatsApp'],
         body[data-mobile-menu-open='true'] [data-whatsapp-button] {
