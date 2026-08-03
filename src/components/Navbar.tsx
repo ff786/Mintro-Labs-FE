@@ -128,7 +128,7 @@ export function Navbar() {
             <header className="fixed inset-x-0 top-3 z-[70] px-4 sm:px-6">
                 <nav
                     aria-label="Main navigation"
-                    className={`mx-auto flex h-[4.5rem] w-full max-w-6xl items-center justify-between rounded-2xl border px-5 transition-all duration-300 sm:px-7 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
+                    className={`mx-auto flex h-[4.5rem] w-full max-w-6xl items-center justify-between rounded-3xl border px-5 transition-all duration-300 sm:px-7 lg:grid lg:grid-cols-[1fr_auto_1fr] ${
                         scrolled
                             ? 'border-white/10 bg-black/85 shadow-[0_20px_60px_rgba(0,0,0,.48)] backdrop-blur-xl'
                             : 'border-white/10 bg-black/65 backdrop-blur-xl'
