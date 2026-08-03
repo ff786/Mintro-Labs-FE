@@ -54,7 +54,7 @@ export function Footer() {
                 <a href="https://www.instagram.com/mintrolabs/" target="_blank" rel="noreferrer" aria-label="Instagram" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky">
                   <Instagram size={16} />
                 </a>
-                <a href="mailto:hello@mintrolabs.com" aria-label="Email" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky">
+                <a href="mailto:connect@mintrolabs.com" aria-label="Email" className="rounded-full border border-white/10 p-3 text-white/70 transition hover:border-sky/20 hover:text-sky">
                   <Mail size={16} />
                 </a>
               </div>
