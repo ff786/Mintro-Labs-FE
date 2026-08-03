@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 1500" role="img" aria-labelledby="title desc">
+  <title id="title">Mintro Labs logo</title>
+  <desc id="desc">Three white diagonal rounded bars on a black circular background.</desc>
+  <circle cx="750" cy="750" r="700" fill="#000"/>
+  <g fill="#fff">
+    <rect x="355.5" y="587.5" width="514" height="108" rx="54" transform="rotate(-45 612.5 641.5)"/>
+    <rect x="607.5" y="592" width="500" height="108" rx="54" transform="rotate(-45 857.5 646)"/>
+    <rect x="641.5" y="808.5" width="500" height="108" rx="54" transform="rotate(-45 891.5 862.5)"/>
+  </g>
+</svg>
