@@ -59,7 +59,7 @@ export function Footer() {
                 </a>
               </div>
               <div className="mt-6 flex items-center gap-2">
-                <p className="text-sm text-white/70">© 2026 Mintro Labs · All rights received</p>
+                <p className="text-sm text-white/70">© 2026 Mintro Labs · All Rights Received.</p>
               </div>
             </div>
 
